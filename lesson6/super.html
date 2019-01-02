@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>
+<script>
+
+    {
+
+        let obj = {
+            name : "jack"
+        }
+
+        let timer = {
+            name : "rose",
+            fn(){
+                return super.name;
+            }
+        }
+
+            Object.setPrototypeOf(timer, obj);
+
+        console.log(timer.fn())
+
+    }
+    
+ //super2   
+    {
+        function User(name,pass) {
+            this.name = name;
+            this.pass = pass;
+
+
+        }
+
+        User.prototype.show = function () {
+            this.name = super.name;
+            
+        }
+
+        let user = new User("jack","123456");
+
+        user.show()
+    }
+
+</script>
